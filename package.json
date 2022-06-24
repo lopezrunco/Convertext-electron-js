@@ -1,0 +1,15 @@
+{
+  "name": "convertext-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Damian Lopez",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.6"
+  }
+}

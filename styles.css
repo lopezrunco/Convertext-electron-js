@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: #464646;
+}
+
+body {
+    background-image: url("bg.jpg");
+    background-position: center;
+}
+
+body,
+#text-to-convert {
+    font-family: "Poppins", sans-serif;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #464646;
+}
+
+.content-wrap {
+    width: 800px;
+    max-width: 98%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.logo h1>span {
+    color: #000;
+}
+
+#text-to-convert {
+    width: 100%;
+    height: 15rem;
+    padding: 1rem;
+    border: 0.1rem solid #464646;
+    outline: none;
+    resize: none;
+    border-radius: 0.2rem;
+    background: #fbfbfb80;
+    color: #464646;
+}
+
+/* Scroll bar styles */
+#text-to-convert::-webkit-scrollbar {
+    width: 8px;
+}
+
+#text-to-convert::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+#text-to-convert::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+#text-to-convert::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#text-to-convert::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+/* Buttons styles */
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    border-radius: 0.2rem;
+    background: #464646;
+    color: #e0e0e0;
+    border: 0.1rem solid #464646;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+button:hover {
+    background: #d0d0d0;
+    color: #464646;
+}
+
+button:active {
+    background: rgb(59, 59, 59);
+    color: #e0e0e0;
+}
+
+button.copy-text-btn {
+    background: transparent;
+    color: #464646;
+    display: flex;
+    gap: .5rem;
+}
+
+button.copy-text-btn:hover {
+    background: #464646;
+    color: #d0d0d0;
+}
+
+button.copy-text-btn:active {
+    background: #d0d0d0;
+    color: #464646;
+}
+
+/* Done & copied alerts */
+#done-alert,
+#copied-alert {
+    position: fixed;
+    /* font-size: 1.2rem; */
+    background-color: #fbfbfbe8;
+    padding: 0.2rem 2em;
+    top: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    display: none;
+}
+
+#done-alert.show,
+#copied-alert.show {
+    display: flex;
+}
+
+#done-alert i,
+#copied-alert i {
+    color: rgb(5, 202, 5);
+    font-weight: 700;
+}
+
+/* Media queries */
+@media (max-width: 690px) {
+    .main-wrapper {
+        height: 100%;
+    }
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+}

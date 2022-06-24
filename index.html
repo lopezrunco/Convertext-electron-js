@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertext</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="content-wrap">
+            <div class="logo">
+                <h1>Conver<span>text</span></h1>
+                <small>Convertext is a simple and functional web app when you can easily convert or go from UPPERCASE to lowercase simply by entering the phrase or text to convert and select your option.</small>
+            </div>
+            <textarea name="text-to-convert" id="text-to-convert" placeholder="Write here your text..."></textarea>
+
+            <div id="done-alert">
+                <i class="fas fa-check"></i>
+                <p>Done!</p>
+            </div>
+
+            <div id="copied-alert">
+                <i class="far fa-copy"></i>
+                <p>Copied!</p>
+            </div>
+
+            <div class="buttons">
+                <button onclick="toUppercase()">Uppercase</button>
+                <button onclick="toLowercase()">Lowercase</button>
+                <button onclick="toCapitalizeAfterDot()">Capitalize after <strong>!?.</strong></button>
+                <button onclick="toCapitalize()">Capitalize all</button>
+                <button onclick="copyText()" class="copy-text-btn">Copy <i class="far fa-copy"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
